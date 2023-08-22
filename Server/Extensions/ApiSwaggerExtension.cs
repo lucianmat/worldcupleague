@@ -14,7 +14,7 @@ public static class ApiSwaggerExtension {
         public static void ConfigureApiSwagger(this IServiceCollection services)
         {
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ApiSwaggerGenOptions>();
-      services.AddEndpointsApiExplorer();
+            services.AddEndpointsApiExplorer();
 
             services.AddSwaggerGen(options =>
             {

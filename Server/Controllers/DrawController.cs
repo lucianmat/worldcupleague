@@ -1,10 +1,14 @@
+using System.ComponentModel.DataAnnotations;
 
 namespace Server.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Produces("application/json")]
+[Consumes("application/json")]
+[Route("api/[controller]")]
+[Route("api/v{version:apiVersion}/[controller]")]
 [ApiVersion("1.0", Deprecated = false)]
-// [ApiVersion("2.0", Deprecated = false)] - test for versioning
+[ApiVersion("2.0", Deprecated = false)] // - test for versioning
 public class DrawController : ControllerBase
 {
 
@@ -16,12 +20,24 @@ public class DrawController : ControllerBase
     }
 
     /// <summary>
-    /// Get all countries
+    /// Get all countries and teams associated
     /// </summary>
     /// <returns></returns>
-    [HttpGet("GetAllCountries", Name = "GetAllCountries")]
-    public IEnumerable<Country[]>? GetAllCountries()
+    [HttpGet("GetAllCountries")]
+    [MapToApiVersion("2.0")]
+    public IEnumerable<Country>? GetAllCountriesV2()
     {
+        return new List<Country>();
+     }
+
+
+    /// <summary>
+    /// Execute random draw
+    /// </summary>
+    /// <param name="request">user who execute draw</param>
+    /// <returns></returns>
+    [HttpPost("DrawCountries")]
+     public IEnumerable<Group>? Draw([FromBody, Required] DrawRequest request){
         return null;
      }
 }

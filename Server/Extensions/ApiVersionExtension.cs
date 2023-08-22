@@ -30,6 +30,7 @@ public static class ApiVersionExtension {
             {
                 // Format the version as "v{Major}.{Minor}.{Patch}" (e.g. v1.0.0).
                 options.GroupNameFormat = "'v'VVV";
+                options.FormatGroupName = (group, version) => $"{group} - {version}";
 
                 options.SubstituteApiVersionInUrl = true;
             });
