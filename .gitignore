@@ -398,7 +398,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 # DevContainers files
-.devcontainer/
+#.devcontainer/
 
 # original request files - documentation
 request/
