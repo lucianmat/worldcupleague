@@ -44,8 +44,7 @@ public class DbDrawRepository : DbContext, IDrawRepository  {
         var results = new DbResults() 
             { 
                 DrawRequest = JsonSerializer.Serialize(request), 
-                Results = JsonSerializer.Serialize(groups),
-                User = request.UserName
+                Results = JsonSerializer.Serialize(groups)
             };
 
         Results!.Add(results);
@@ -89,9 +88,6 @@ public class DbResults {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
-
-    [Required]
-    public required string User { get; set; }
 
     [Required]
     public required string DrawRequest { get; set; }

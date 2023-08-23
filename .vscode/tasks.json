@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/WorldCupLeague.sln",
+                "${workspaceFolder}/src/WorldCupLeague.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/WorldCupLeague.sln",
+                "${workspaceFolder}/src/WorldCupLeague.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/WorldCupLeague.sln"
+                "${workspaceFolder}/src/WorldCupLeague.sln"
             ],
             "problemMatcher": "$msCompile"
         },
@@ -42,7 +42,7 @@
             "type": "process", 
             "isBackground": true, 
             "command": "dotnet", 
-            "args": [ "test", "${workspaceFolder}/DrawServiceTest/DrawServiceTest.csproj" ], 
+            "args": [ "test", "${workspaceFolder}/src/DrawServiceTest/DrawServiceTest.csproj" ], 
             "options": 
                 { 
                     "env": 
