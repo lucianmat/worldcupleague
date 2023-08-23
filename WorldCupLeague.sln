@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{804A8C48-B70A-44C3-9936-01C34D5EF141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawService", "DrawService\DrawService.csproj", "{26A51635-3487-4E84-8626-FE342A71C36F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawServiceTest", "DrawServiceTest\DrawServiceTest.csproj", "{536CAF08-4165-4FF2-A86B-B8646F10518D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{804A8C48-B70A-44C3-9936-01C34D5EF141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{804A8C48-B70A-44C3-9936-01C34D5EF141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{804A8C48-B70A-44C3-9936-01C34D5EF141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{804A8C48-B70A-44C3-9936-01C34D5EF141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26A51635-3487-4E84-8626-FE342A71C36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A51635-3487-4E84-8626-FE342A71C36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A51635-3487-4E84-8626-FE342A71C36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A51635-3487-4E84-8626-FE342A71C36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536CAF08-4165-4FF2-A86B-B8646F10518D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536CAF08-4165-4FF2-A86B-B8646F10518D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536CAF08-4165-4FF2-A86B-B8646F10518D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536CAF08-4165-4FF2-A86B-B8646F10518D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

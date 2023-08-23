@@ -1,0 +1,5 @@
+{
+    "ConnectionStrings" : {
+        "DrawDb" : "Server=localhost;Database=DrawDb_LM;User Id=sa;Password=P@ssw0rd;TrustServerCertificate=true"
+    }
+}

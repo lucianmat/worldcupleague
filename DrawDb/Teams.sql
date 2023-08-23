@@ -1,0 +1,6 @@
+CREATE TABLE [dbo].[Teams]
+(
+  [Id] INT  IDENTITY(1,1)  NOT NULL PRIMARY KEY,
+  [Name] NVARCHAR(50) NOT NULL,
+  [CountryId] INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Countries]([Id])
+)

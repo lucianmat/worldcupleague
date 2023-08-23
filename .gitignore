@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# DevContainers files
+.devcontainer/
+
+# original request files - documentation
+request/
+
+.env # Ignore environment file
