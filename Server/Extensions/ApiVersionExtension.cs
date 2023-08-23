@@ -14,10 +14,12 @@ public static class ApiVersionExtension {
             services.AddApiVersioning(options =>
             {
                 options.ReportApiVersions = true;
-
+            
                 // Set a default version when it's not provided,
                 options.AssumeDefaultVersionWhenUnspecified = true;
-                options.DefaultApiVersion = new ApiVersion(1, 0);
+                // options.DefaultApiVersion = new ApiVersion(1, 0);
+                // asume latest version
+                options.ApiVersionSelector = new CurrentImplementationApiVersionSelector(options);
 
                 // Combine (or not) API Versioning Mechanisms:
                 options.ApiVersionReader = ApiVersionReader.Combine(

@@ -1,4 +1,5 @@
 using Asp.Versioning.ApiExplorer;
+using DrawService.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,8 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddProblemDetails();
 
+// use extensions to configure services
 builder.Services.ConfigureApiVersioning();
 builder.Services.ConfigureApiSwagger();
+
+DrawService.ConfigurationManager.Initialize();
+DbDrawRepository dbDrawRepository = new(DrawService.ConfigurationManager.ConnectionString!);
+DrawService.DrawService drawService = new(dbDrawRepository);
+
+builder.Services.AddSingleton<IDrawService>(drawService);
 
 var app = builder.Build();
 

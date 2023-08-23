@@ -9,6 +9,6 @@ namespace DrawService.Models
         [JsonPropertyName("name")]
         [StringLength(50, MinimumLength = 3)]
         [Description("Name of the team")]
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 }

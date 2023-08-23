@@ -9,11 +9,11 @@ public class DrawRequest  : IValidatableObject
     [Required]
     [Description("User who execute draw")]
     [StringLength(50, MinimumLength = 3)]
-    public string UserName { get; set; }
+    public required string UserName { get; set; }
 
     [Required]
     [Description("Number of groups, required to be  4 or 8")]
-    public int NumberOfGroups { get; set; } = 8;
+    public  int NumberOfGroups { get; set; } = 8;
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     { 
